@@ -332,7 +332,7 @@ function App() {
             {!notificationsEnabled && (
               <button
                 onClick={enableNotifications}
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="flex items-center gap-2 px-2 py-2 rounded-md bg-gradient-to-r from-purple-600 to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all"
                 title="Habilitar notificaciones"
               >
                 <Bell className="w-5 h-5" />
@@ -340,7 +340,7 @@ function App() {
               </button>
             )}
             {notificationsEnabled && (
-              <div className="flex items-center gap-2 px-4 py-2 rounded-md bg-green-600/30 text-green-300 border border-green-500/50">
+              <div className="flex items-center gap-2 px-2 py-2 rounded-md bg-green-600/30 text-green-300 border border-green-500/50">
                 <Bell className="w-5 h-5" />
                 <span className="hidden md:inline text-sm">Notificaciones ON</span>
               </div>
@@ -361,8 +361,8 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* LEFT: Visual area */}
           <div className="md:col-span-1 bg-[rgba(147,51,234,0.05)] rounded-xl p-4 relative overflow-hidden flex flex-col items-center border border-purple-800/30">
-            <div className="w-full h-auto flex items-center justify-center px-4 mb-4">
-              <pre className="text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 leading-tight sm:leading-normal text-center whitespace-pre-wrap mb-2">
+            <div className="w-full h-auto flex items-center justify-center px-2 mb-4">
+              <pre className="text-xs sm:text-sm md:text-lg lg:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 leading-tight sm:leading-normal text-center whitespace-pre-wrap mb-2">
                 {typedText || ' '}
                 {isPlaying && <span className="inline-block animate-pulse text-white">|</span>}
               </pre>
