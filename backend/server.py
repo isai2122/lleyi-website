@@ -20,7 +20,7 @@ ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection
-mongo_url = os.environ['MONGO_URL']
+mongo_url = os.environ.get("MONGO_URL", "mongodb://localhost:27017/") # Valor por defecto para desarrollo local
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
@@ -32,7 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Email configuration
-SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY', '')
+SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY", "") # Si no hay clave, la funcionalidad de correo no funcionará
 NOTIFICATION_EMAIL = os.environ.get('NOTIFICATION_EMAIL', 'Yuenortiz252@gmail.com')
 FROM_EMAIL = os.environ.get('FROM_EMAIL', 'birthday@emergent.com')
 
@@ -40,9 +40,9 @@ FROM_EMAIL = os.environ.get('FROM_EMAIL', 'birthday@emergent.com')
 scheduler = BackgroundScheduler(timezone=pytz.UTC)
 
 # MongoDB connection
-mongo_url = os.environ['MONGO_URL']
+mongo_url = os.environ.get("MONGO_URL", "mongodb://localhost:27017/") # Valor por defecto para desarrollo local
 client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+db = client[os.environ.get("DB_NAME", "lleyi_default_db")] # Valor por defecto para desarrollo local
 
 # Create the main app without a prefix
 app = FastAPI()

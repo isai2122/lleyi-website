@@ -24,9 +24,6 @@
     }
   ],
   "env": {
-    "MONGO_URL": "@mongo_url",
-    "DB_NAME": "@db_name",
-    "SENDGRID_API_KEY": "@sendgrid_api_key",
     "NOTIFICATION_EMAIL": "Yuenortiz252@gmail.com",
     "FROM_EMAIL": "birthday@emergent.com",
     "CORS_ORIGINS": "*"
