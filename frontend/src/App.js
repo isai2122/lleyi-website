@@ -361,7 +361,7 @@ function App() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* LEFT: Visual area */}
           <div className="md:col-span-1 bg-[rgba(147,51,234,0.05)] rounded-xl p-4 relative overflow-hidden flex flex-col items-center border border-purple-800/30">
-            <div className="w-full h-36 flex items-center justify-center px-4 mb-4">
+            <div className="w-full h-auto flex items-center justify-center px-4 mb-4">
               <pre className="text-lg sm:text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-blue-300 leading-tight sm:leading-normal text-center whitespace-pre-wrap mb-2">
                 {typedText || ' '}
                 {isPlaying && <span className="inline-block animate-pulse text-white">|</span>}
